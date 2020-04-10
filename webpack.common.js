@@ -2,7 +2,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 
 module.exports = {
-    entry: "./src/index.js",
+    entry: "./src/assets/js/views/index.js",
     output: {
         path: path.resolve(__dirname, "dist"),
         filename: "main.js",
@@ -20,6 +20,12 @@ module.exports = {
                     },
                 ],
             },
+            {
+                test: /\.(png|svg|jpg|gif)$/,
+                use: [
+                    "file-loader"
+                ]
+            }
         ],
     },
     plugins: [
