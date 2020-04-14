@@ -33,5 +33,9 @@ module.exports = {
             template: "./src/index.html",
             filename: "index.html",
         }),
+        new HtmlWebpackPlugin({
+            template: "./src/report.html",
+            filename: "report.html",
+        }),
     ],
 };

@@ -84,11 +84,11 @@ class Navigation extends HTMLElement {
                     <p style="font-size: 8pt;">Report</p>
                     </a>
                 </div>
-                <a href="#">
+                <a href="/">
                     <img src="${Dashboard}" alt="dashboard-logo"> 
                     <p>Home</p>
                 </a>
-                <a href="#">
+                <a href="report.html">
                     <img src="${Report}" alt="report-logo"> 
                     <p>Report</p>
                 </a>

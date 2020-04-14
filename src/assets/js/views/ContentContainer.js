@@ -30,6 +30,10 @@ class ContentContainer extends HTMLElement {
     render(confirm, recover, death, lstUpdate) {
         this._shadowRoot.innerHTML = `
             <style>
+                * {
+                    box-sizing: border-box;
+                }
+
                 .content {
                     background-color: whitesmoke;
                     width: 80%;
@@ -94,7 +98,7 @@ class ContentContainer extends HTMLElement {
                 .update-status {
                     font-size: 1vw;
                     text-align: center;
-                    margin: 10px 0px 0px 0px;
+                    margin: 10px 0px 10px 0px;
                 }
 
                 #chart-container {
@@ -105,11 +109,11 @@ class ContentContainer extends HTMLElement {
             <div>
                 <div class="dashboard">
                 
-                    <h4>Corona Virus Report</h4>
+                    <h4>Covid-19 Case (Global)</h4>
                     <div class="card dashboard-content">
                         <div>
                             <div class="dashboard-items">
-                                <p>confirmed</p>
+                                <p>Confirmed</p>
                                 <p>${Number(confirm.value).toLocaleString(
                                     "id",
                                     {
@@ -119,7 +123,7 @@ class ContentContainer extends HTMLElement {
                             </div>
 
                             <div class="dashboard-items">
-                                <p>recovered</p>
+                                <p>Recovered</p>
                                 <p>${Number(recover.value).toLocaleString(
                                     "id",
                                     {
@@ -129,7 +133,7 @@ class ContentContainer extends HTMLElement {
                             </div>
 
                             <div class="dashboard-items">
-                                <p>deaths</p>
+                                <p>Deaths</p>
                                 <p>${Number(death.value).toLocaleString("id", {
                                     maximumSignificantDigits: 2,
                                 })}</p>
@@ -160,7 +164,7 @@ class ContentContainer extends HTMLElement {
                 labels: ["Confirmed", "Recovered", "Deaths"],
                 datasets: [
                     {
-                        label: "Covid-19 Case",
+                        label: ["Covid-19 Case (Global)"],
                         data: [confirm.value, recover.value, death.value],
                         backgroundColor: [
                             "rgba(255, 206, 86, 0.2)",
